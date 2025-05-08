@@ -182,3 +182,47 @@ class LicensePlateTracker:
         
         return frame, filtered
     
+def main():
+# Sample plate info map - in a real scenario, this could be loaded from a database
+plate_info_map = {
+'JH-60-261':'John Doe, Emp 12345',
+'JW-60-261':'Jane Smith, Visitor',
+'JH60261':'FastShip Delivery',
+'JW60261':'Security Badge S-9876'}
+
+# Initialize the tracker
+tracker = LicensePlateTracker(plate_info_map)
+
+# Open video capture - use 0 for webcam or provide a video file path
+video_source = 0 # Change this to a video file path if needed
+cap = cv2.VideoCapture(video_source)
+
+if not cap.isOpened():
+print(f"Error: Could not open video source {video_source}")
+return
+
+print("Press 'q' to quit")
+
+while True:
+ret, frame = cap.read()
+if not ret:
+print("End of video stream")
+break
+
+# Process the frame
+processed_frame, filtered_frame = tracker.process_frame(frame)
+
+# Display the results
+cv2.imshow('License Plate Recognition', processed_frame)
+cv2.imshow('Filtered Image', filtered_frame)
+
+# Press 'q' to exit
+if cv2.waitKey(1) & 0xFF == ord('q'):
+break
+
+# Clean up
+cap.release()
+cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+main()
