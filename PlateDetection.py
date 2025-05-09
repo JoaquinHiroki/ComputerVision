@@ -137,10 +137,10 @@ class LicensePlateTracker:
                 
             # Clean and normalize the text (remove spaces, convert to uppercase)
             cleaned_text = ''.join(text.split()).upper()
-            if cleaned_text == "JW-60-261":
-                cleaned_text = "JH-60-261"
+            if cleaned_text == "JH-60-261":
+                cleaned_text = "JW-60-261"
             # Check if this looks like a license plate (simple heuristic)
-            if len(cleaned_text) >= 5 and len(cleaned_text) <= 12:
+            if len(cleaned_text) >= 8 and len(cleaned_text) <= 12:
                 # This could be a license plate
                 detected_plates.add(cleaned_text)
                 
@@ -205,10 +205,10 @@ class LicensePlateTracker:
 def main():
     # Sample plate info map - in a real scenario, this could be loaded from a database
     plate_info_map = {
-        'JH-60-261':'John Doe, Emp 12345',
-        'JW-60-261':'Jane Smith, Visitor',
-        'JH60261':'FastShip Delivery',         
-        'JW60261':'Security Badge S-9876'}
+        'JH-60-261':'John Doe, Emp 4312',
+        'HYN-051-A':'Jane Smith, Visitor',
+        'JCZ-263-A':'Jose Emilio Inzunza, Emp 4381'
+    }
     
     # Initialize the tracker
     tracker = LicensePlateTracker(plate_info_map)

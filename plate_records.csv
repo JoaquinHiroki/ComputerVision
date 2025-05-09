@@ -1,0 +1,9 @@
+Timestamp,Plate,Action,Info
+2025-05-08 20:06:42,JCZ-263-A,entry,"Jose Emilio Inzunza, Emp 4381"
+2025-05-08 20:06:57,JCZ-263-A,exit,"Jose Emilio Inzunza, Emp 4381"
+2025-05-08 20:07:13,HYN-051-A,entry,"Jane Smith, Visitor"
+2025-05-08 20:07:31,HYN-051-A,exit,"Jane Smith, Visitor"
+2025-05-08 20:07:58,JH-60-261,entry,"John Doe, Emp 4312"
+2025-05-08 20:08:07,JH-60-261,exit,"John Doe, Emp 4312"
+2025-05-08 20:08:19,JH-60-261,entry,"John Doe, Emp 4312"
+2025-05-08 20:08:29,JH-60-261,exit,"John Doe, Emp 4312"
