@@ -20,6 +20,4 @@ Este proyecto implementa un sistema de detección y seguimiento de placas vehicu
 - CSV / manejo de archivos
 - Terminal (modo script interactivo)
 
-## 📁 Estructura del proyecto
-
 # ComputerVision
