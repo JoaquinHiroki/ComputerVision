@@ -20,4 +20,21 @@ Este proyecto implementa un sistema de detección y seguimiento de placas vehicu
 - CSV / manejo de archivos
 - Terminal (modo script interactivo)
 
+
+## 🧠 How It Works: EasyOCR + OpenCV
+
+This project uses [**EasyOCR**](https://github.com/JaidedAI/EasyOCR) and [**OpenCV**](https://opencv.org/) to detect and extract text from images. Here's a quick overview of what each library does and how they work together:
+
+### 📷 OpenCV: Image Processing
+OpenCV (Open Source Computer Vision Library) is used to:
+- **Load and preprocess images** (e.g., resizing, converting to grayscale, thresholding).
+- **Enhance text regions** for better OCR results (e.g., noise reduction, edge detection, morphological transformations).
+- Optionally **detect contours or regions of interest** before OCR to reduce false positives.
+
+### 🔍 EasyOCR: Text Recognition
+EasyOCR is a deep learning–based Optical Character Recognition (OCR) library that:
+- Uses a **pretrained neural network** to read text in multiple languages directly from images.
+- Supports detection of printed and handwritten text.
+- Works out of the box with minimal configuration.
+
 # ComputerVision

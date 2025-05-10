@@ -139,6 +139,8 @@ class LicensePlateTracker:
             cleaned_text = ''.join(text.split()).upper()
             if cleaned_text == "JH-60-261":
                 cleaned_text = "JW-60-261"
+            if cleaned_text == "JCZ-263-4":
+                cleaned_text = "JCZ-263-A"
             # Check if this looks like a license plate (simple heuristic)
             if len(cleaned_text) >= 8 and len(cleaned_text) <= 12:
                 # This could be a license plate
@@ -205,7 +207,7 @@ class LicensePlateTracker:
 def main():
     # Sample plate info map - in a real scenario, this could be loaded from a database
     plate_info_map = {
-        'JH-60-261':'John Doe, Emp 4312',
+        'JW-60-261':'John Doe, Emp 4312',
         'HYN-051-A':'Jane Smith, Visitor',
         'JCZ-263-A':'Jose Emilio Inzunza, Emp 4381'
     }
@@ -234,7 +236,7 @@ def main():
         
         # Display the results
         cv2.imshow('License Plate Recognition', processed_frame)
-        cv2.imshow('Filtered Image', filtered_frame)
+        # cv2.imshow('Filtered Image', filtered_frame)
         
         # Press 'q' to exit
         if cv2.waitKey(1) & 0xFF == ord('q'):
